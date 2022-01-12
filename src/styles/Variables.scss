@@ -8,6 +8,9 @@ $main-color: #5454d4;
 $primary-color: #fff;
 $secondary-color: rgba(255, 255, 255, 0.7);
 
+@mixin mT($size) {
+  margin-top: $size;
+}
 // Responsive
 
 @mixin sm {

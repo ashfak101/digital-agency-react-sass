@@ -1,0 +1,14 @@
+@import "../../styles/Variables.scss";
+
+.banner {
+  display: grid;
+  grid-template-columns: 5fr 6fr;
+  @include mT(50px);
+  &-content {
+    h2 {
+    }
+  }
+  &-img {
+    text-align: center;
+  }
+}

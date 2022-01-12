@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
+import Banner from './components/Banner/Banner';
 import Dropdown from './components/Dropdown/Dropdown';
 import Navbar from './components/Navbar/Navbar';
 
@@ -10,13 +11,24 @@ function App() {
     const toggle=()=>{
       setIsOpen(!isOpen);
     }
-
+    useEffect(()=>{
+      const hideMenu=()=>{
+          if(window.innerWidth && isOpen){
+              setIsOpen(false)
+          }
+      }
+      window.addEventListener('resize',hideMenu)
+      return ()=>{
+          window.removeEventListener('resize',hideMenu)
+      }
+  },[isOpen])
   return (
     <div className="">
       <Navbar toggle={toggle}/>
       <Dropdown 
         isOpen={isOpen}
       />
+      <Banner/>
     </div>
   );
 }

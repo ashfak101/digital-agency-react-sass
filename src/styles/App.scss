@@ -1,0 +1,15 @@
+@import "./Variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: $Poppins;
+  background: $body-color;
+  color: $primary-color;
+}
+
+.container {
+  margin: 0 277px;
+}

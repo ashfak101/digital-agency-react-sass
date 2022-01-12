@@ -1,0 +1,38 @@
+@import "../../styles/Variables.scss";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 27px 0;
+
+  h3 {
+    font-size: 19px;
+  }
+  ul {
+    display: flex;
+    list-style: none;
+  }
+  li {
+    margin: 0 26px;
+    &:first-child a {
+      color: $main-color;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: $secondary-color;
+    font-size: 12px;
+  }
+  button {
+    color: $primary-color;
+    padding: 5px 10px;
+    background: transparent;
+    border: 0.66369px solid $secondary-color;
+    border-radius: 3px;
+    cursor: pointer;
+    &:hover {
+      border-color: $main-color;
+      transition: ease all 1s;
+    }
+  }
+}

@@ -7,9 +7,37 @@ $body-color: #19191b;
 $main-color: #5454d4;
 $primary-color: #fff;
 $secondary-color: rgba(255, 255, 255, 0.7);
-
+@mixin rectangle {
+  position: absolute;
+  content: "";
+  height: 249px;
+  width: 249px;
+  transform: rotate(24deg);
+  border: 1px solid $main-color;
+}
 @mixin mT($size) {
   margin-top: $size;
+}
+
+@mixin paragraph($size, $my, $lineH) {
+  font-size: $size;
+  margin: $my 0;
+  color: $secondary-color;
+  line-height: $lineH;
+}
+
+@mixin btn {
+  color: $primary-color;
+  background-color: $main-color !important;
+  padding: 8px 20px;
+  background: transparent;
+  border: 1px solid $secondary-color !important;
+  cursor: pointer;
+  &:hover {
+    border-color: $main-color;
+    background: transparent !important;
+    transition: ease all 1s;
+  }
 }
 // Responsive
 

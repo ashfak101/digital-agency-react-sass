@@ -6,9 +6,42 @@
   @include mT(50px);
   &-content {
     h2 {
+      font-size: 53.1px;
+      font-style: normal;
+      font-weight: bold;
+      line-height: 55.7px;
+      @include mT(40px);
     }
+    p {
+      @include paragraph(14px, 15px, 30px);
+    }
+    button {
+      @include btn;
+    }
+  }
+  &-icon-ar {
+    transform: rotate(20deg);
   }
   &-img {
     text-align: center;
+    position: relative;
+    .img {
+      clip-path: polygon(
+        71% -6%,
+        76% 3%,
+        98% -8%,
+        102% 54%,
+        82% 89%,
+        75% 101%,
+        33% 87%,
+        12% 80%,
+        -3% 54%,
+        20% 9%
+      );
+    }
+    &::before {
+      content: "";
+      position: absolute;
+    }
   }
 }

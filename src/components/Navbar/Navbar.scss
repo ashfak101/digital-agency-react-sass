@@ -8,9 +8,12 @@
   h3 {
     font-size: 19px;
   }
-  ul {
+  &-menu {
     display: flex;
     list-style: none;
+    @include sm {
+      display: none;
+    }
   }
   li {
     margin: 0 26px;
@@ -33,6 +36,17 @@
     &:hover {
       border-color: $main-color;
       transition: ease all 1s;
+    }
+  }
+  &-icon {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    &:hover {
+      color: $main-color;
+    }
+    @include sm {
+      display: block;
     }
   }
 }

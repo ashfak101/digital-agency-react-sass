@@ -1,0 +1,26 @@
+@import "../../styles/Variables.scss";
+
+.dropdown {
+  transition: ease-in-out all 3s;
+  display: block;
+  background: transparent;
+  position: absolute;
+  left: 40%;
+  top: 10%;
+  text-align: center;
+
+  li {
+    list-style: none;
+    margin-bottom: 10px;
+    &:first-child a {
+      color: $main-color;
+    }
+    a {
+      text-decoration: none;
+      color: $primary-color;
+      &:hover {
+        color: $main-color;
+      }
+    }
+  }
+}

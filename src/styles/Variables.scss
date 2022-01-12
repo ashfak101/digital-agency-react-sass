@@ -7,3 +7,21 @@ $body-color: #19191b;
 $main-color: #5454d4;
 $primary-color: #fff;
 $secondary-color: rgba(255, 255, 255, 0.7);
+
+// Responsive
+
+@mixin sm {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin md {
+  @media (min-width: 768px) and (max-width: 992px) {
+    @content;
+  }
+}
+@mixin lg {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}

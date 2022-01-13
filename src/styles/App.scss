@@ -16,4 +16,7 @@ body {
   @include sm {
     width: 95%;
   }
+  @include md {
+    width: 80%;
+  }
 }

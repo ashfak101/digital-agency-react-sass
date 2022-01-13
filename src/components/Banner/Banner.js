@@ -14,6 +14,8 @@ export default function Banner() {
                         <button>Our Servicess <AiOutlineArrowUp className='banner-icon-ar'/></button>
                     </div>
                     <div className='banner-img'>
+                        <i className='banner-arrow'></i>
+                        <i className='banner-triangle-1'></i>
                         <img className='img'  src={bannerImg} alt="" />
                     </div>
                 </div>

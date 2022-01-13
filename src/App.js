@@ -1,8 +1,11 @@
 import { useState,useEffect } from 'react';
 import Banner from './components/Banner/Banner';
 import Choice from './components/Choice/Choice';
+import Contact from './components/Contact/Contact';
 import Dropdown from './components/Dropdown/Dropdown';
+import Footer from './components/Footer/Footer';
 import Navbar from './components/Navbar/Navbar';
+import Portfolio from './components/Portfolio/Portfolio';
 import Services from './components/Services/Services';
 
 import './styles/App.scss'
@@ -33,10 +36,12 @@ function App() {
       />
     
       <Banner/>
-      <Choice
-        
+      <Choice  
       />
         <Services/>
+        <Portfolio/>
+        <Contact/>
+        <Footer/>
     </div>
   );
 }

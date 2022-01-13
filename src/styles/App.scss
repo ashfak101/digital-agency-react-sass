@@ -20,3 +20,45 @@ body {
     width: 80%;
   }
 }
+.first-gradient {
+  position: absolute;
+  width: 309.94px;
+  height: 818.86px;
+  left: 10px;
+  top: 0px;
+  @include sm {
+    width: 50%;
+    height: 100%;
+    transform: rotate(0);
+  }
+
+  background: linear-gradient(
+    180deg,
+    rgba(84, 84, 212, 0.27) 0%,
+    rgba(84, 84, 212, 0.1134) 100%
+  );
+  filter: blur(199.107px);
+  border-radius: 154.972px;
+  transform: rotate(-54.37deg);
+}
+.second-gradient {
+  @extend .first-gradient;
+  left: 1150px;
+  @include sm {
+    width: 50%;
+    transform: rotate(0deg);
+    left: -50px;
+    bottom: 0;
+  }
+  @include md {
+    left: 50%;
+  }
+  background: linear-gradient(
+    180deg,
+    rgba(251, 168, 28, 0.1066) 0%,
+    rgba(224, 86, 136, 0.0615) 100%
+  );
+  filter: blur(199.107px);
+  border-radius: 154.972px;
+  transform: rotate(65.71deg);
+}

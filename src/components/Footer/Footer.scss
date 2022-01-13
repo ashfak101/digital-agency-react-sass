@@ -1,0 +1,24 @@
+@import "../../styles/Variables.scss";
+
+.footer {
+  display: flex;
+  margin: 30px 0;
+  flex-direction: row-reverse;
+  color: $secondary-color;
+  font-size: 12px;
+  @include sm {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  &-content {
+    display: flex;
+    margin-right: 20px;
+    @include sm {
+      margin-bottom: 10px;
+    }
+    li {
+      list-style: none;
+      margin: 0 10px;
+    }
+  }
+}

@@ -24,7 +24,7 @@ $secondary-color: rgba(255, 255, 255, 0.7);
   background-color: $main-color !important;
   padding: 8px 20px;
   background: transparent;
-  border: 1px solid $secondary-color !important;
+  border: 1px solid $main-color !important;
   cursor: pointer;
   &:hover {
     border-color: $main-color;
@@ -81,6 +81,18 @@ $secondary-color: rgba(255, 255, 255, 0.7);
   width: 5px;
   position: absolute;
   background: $primary-color;
+}
+
+//Dot---------------
+@mixin dot($right) {
+  content: "";
+  height: 5px;
+  width: 5px;
+  background: #121213;
+  position: absolute;
+  right: $right;
+  top: 2px;
+  border-radius: 5px;
 }
 // Responsive
 

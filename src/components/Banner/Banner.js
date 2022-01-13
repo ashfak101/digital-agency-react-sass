@@ -7,6 +7,8 @@ export default function Banner() {
     return (
         <>
             <section className='container'>
+                <div className='first-gradient'></div>
+                <div className='second-gradient'></div>
                 <div className='banner'>
                     <div className='banner-content'>
                         <h2>Build Your Awesome Platform</h2>

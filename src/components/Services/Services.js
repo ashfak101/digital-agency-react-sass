@@ -49,12 +49,18 @@ export default function Services() {
     ];
     return (
         <div className='container'>
+          
             <div className='center'>
+            
+                 <i className='services-triangle-3'></i>
+                 <i className='services-triangle-4'></i>
                 <Text
                     text={text}
                 ></Text>
+                <i className='services-plus'></i>
             </div>
             <div className='services'>
+            
                 {
                     services.map(service => <div className='services-content'>
                         <i className={service.icon}></i>

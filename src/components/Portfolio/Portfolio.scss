@@ -1,0 +1,78 @@
+@import "../../styles/Variables.scss";
+@import "../Banner/Banner.scss";
+.portfolio {
+  padding: 70px 0;
+  position: relative;
+  &-content {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+    margin: 50px 0px;
+    grid-gap: 40px;
+    &-div {
+      background: #1e1e20;
+      border-radius: 9.29166px;
+      padding: 10px;
+      height: 67%;
+      &:nth-child(2) {
+        margin-top: 70px;
+      }
+      &:nth-child(3) {
+        margin-top: 110px;
+      }
+      &-img {
+        width: 100%;
+      }
+    }
+  }
+  &-plus {
+    @extend .banner-plus;
+    top: 100px;
+  }
+  .dot {
+    background: $main-color;
+    height: px;
+    width: 13px;
+    padding: 4px;
+    position: absolute;
+    left: 50%;
+    border-radius: 10px;
+    &::before {
+      @include dot(-20px);
+    }
+    &::after {
+      @include dot(-11px);
+    }
+  }
+  .arrow-2 {
+    @extend .banner-arrow;
+  }
+  .third-gradient {
+    position: absolute;
+    width: 309.94px;
+    height: 337.48px;
+    left: -207.07px;
+    top: -670px;
+    background: linear-gradient(
+      180deg,
+      rgba(84, 84, 212, 0.21) 0%,
+      rgba(84, 84, 212, 0.0882) 100%
+    );
+    filter: blur(199.107px);
+    border-radius: 154.972px;
+    transform: rotate(-54.37deg);
+  }
+  .forth-gradient {
+    left: 1110px;
+    top: 50px;
+    @include sm {
+      left: 0;
+    }
+    @include md {
+      left: 50%;
+    }
+    @extend .third-gradient;
+  }
+}

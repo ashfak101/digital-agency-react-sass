@@ -1,0 +1,29 @@
+@import "../../styles/Variables.scss";
+@import "../Banner/Banner.scss";
+
+.contact {
+  background: rgba(30, 30, 32, 0.5);
+  padding: 100px 0;
+  &-display {
+    position: relative;
+  }
+  &-content {
+    display: flex;
+    @include sm {
+      flex-direction: column;
+    }
+  }
+  &-btn {
+    @include btn;
+    margin-left: 200px;
+  }
+  &-circle {
+    @extend .banner-circle;
+    left: 0;
+    bottom: -85px;
+  }
+  &-plus {
+    @extend .banner-plus;
+    top: -60px;
+  }
+}

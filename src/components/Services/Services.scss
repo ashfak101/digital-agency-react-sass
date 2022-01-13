@@ -1,11 +1,13 @@
 @import "../../styles/Variables.scss";
-
+@import "../Banner/Banner.scss";
 .center {
+  position: relative;
   text-align: center;
   margin: 100px 0px;
 }
 
 .services {
+  position: relative;
   display: grid;
   grid-template-columns: 2fr 2fr 2fr;
   text-align: center;
@@ -13,6 +15,41 @@
   @include sm {
     grid-template-columns: 1fr;
   }
+  &-triangle-3 {
+    @extend .banner-triangle-1;
+    left: 100px;
+    @include sm {
+      left: 10px;
+      bottom: -50px;
+    }
+    @include md {
+      left: 10px;
+    }
+  }
+  &-triangle-4 {
+    @extend .banner-triangle-2;
+    left: 110px;
+    @include sm {
+      left: 15px;
+      bottom: -70px;
+    }
+    @include md {
+      left: 0px;
+    }
+  }
+  &-plus {
+    @extend .banner-plus;
+    right: 100px;
+    transform: rotate(45deg);
+    @include sm {
+      right: 50px;
+      bottom: -50px;
+    }
+    @include md {
+      right: -10px;
+    }
+  }
+
   &-title {
     font-family: Nunito Sans;
     font-style: normal;

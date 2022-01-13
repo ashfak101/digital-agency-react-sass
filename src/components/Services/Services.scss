@@ -4,3 +4,44 @@
   text-align: center;
   margin: 100px 0px;
 }
+
+.services {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  text-align: center;
+  grid-gap: 100px;
+  @include sm {
+    grid-template-columns: 1fr;
+  }
+  &-title {
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18.5833px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: -0.497977px;
+    margin: 15px 0;
+  }
+  .p-1 {
+    @include paragraph(13px, 0, 19px);
+  }
+  &-content {
+    &:nth-child(2) .fas,
+    &:last-child .fas {
+      background: rgba(240, 64, 55, 0.1);
+      color: #f04037;
+    }
+    &:nth-child(3) .fas,
+    &:nth-child(4) .fas {
+      background: rgba(254, 220, 90, 0.1);
+      color: #fedc5a;
+    }
+  }
+  .fas {
+    background: rgba(84, 84, 212, 0.1);
+    padding: 15px;
+    color: $main-color;
+    border-radius: 50%;
+  }
+}

@@ -1,0 +1,39 @@
+@import "../../styles/Variables.scss";
+
+.choice {
+  &-content {
+    @include mT(150px);
+    display: flex;
+    justify-content: space-between;
+    @include sm {
+      flex-direction: column;
+    }
+  }
+  p {
+    @include paragraph(14px, 0, 26px);
+  }
+  &-img {
+    @include mT(50px);
+    position: relative;
+  }
+  &-rightarrow {
+    position: absolute;
+    cursor: pointer;
+    left: 50%;
+    top: 50%;
+    font-size: 30px;
+    color: $primary-color;
+    padding: 30px;
+    background: $main-color;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    &:hover {
+      background: $primary-color;
+      color: $main-color;
+      transition: ease all 1s;
+    }
+  }
+  .choiceimg {
+    width: 100%;
+  }
+}

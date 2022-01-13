@@ -2,7 +2,8 @@
 
 .banner {
   display: grid;
-  grid-template-columns: 5fr 6fr;
+  grid-template-columns: 7fr 4fr;
+  align-items: center;
   @include sm {
     grid-template-columns: 1fr;
   }
@@ -26,7 +27,6 @@
     transform: rotate(20deg);
   }
   &-img {
-    text-align: center;
     position: relative;
     .img {
       z-index: 1;
@@ -45,36 +45,37 @@
     }
     &::before {
       @include rectangle;
-      left: 231px;
+      left: 53px;
       bottom: 38px;
       background: $main-color;
       @include sm {
-        left: 89px;
+        left: 50px;
       }
       @include md {
-        left: 108px;
+        left: 50px;
         bottom: 38px;
       }
     }
     &::after {
       @include rectangle;
       z-index: -1;
-      left: 199px;
+      left: 30px;
       top: 88px;
       @include sm {
-        left: 64px;
+        left: 40px;
       }
       @include md {
-        left: 87px;
+        left: 40px;
       }
     }
   }
   // Arrow
   &-arrow {
-    @include arrow(3px, 3px, 60px);
+    @include arrow(3px, 3px, 0px);
     transform: rotate(-135deg);
     @include sm {
       top: 27px;
+      left: 40px;
     }
     &::before {
       content: "";
@@ -89,22 +90,61 @@
   }
   // Triangle-----------------------
   &-triangle-1 {
-    position: absolute;
+    @include triangle;
     bottom: 0px;
-    left: 20px;
-    height: 52px;
-    width: 0.016px;
-    border: 0.16px solid rgb(255, 255, 255);
+    left: -40px;
+    @include sm {
+      left: 40px;
+    }
     &::before {
-      @include triangle(60px, 2px, 60deg, 2px);
+      @include triangleAb(60px, 2px, 60deg, 2px);
       border-color: $primary-color;
       left: 10px;
       bottom: -42px;
     }
     &::after {
-      @include triangle(60px, 2px, 111deg, 2px);
+      @include triangleAb(60px, 2px, 111deg, 2px);
       left: -15px;
       top: 9px;
+    }
+  }
+  &-triangle-2 {
+    @include triangle;
+    bottom: -15px;
+    left: -30px;
+    @include sm {
+      left: 30px;
+    }
+    &::before {
+      @include triangleAb(60px, 2px, 60deg, 1px);
+      border-color: $primary-color;
+      left: 10px;
+      bottom: -42px;
+    }
+    &::after {
+      @include triangleAb(60px, 2px, 111deg, 1px);
+      left: -15px;
+      top: 9px;
+    }
+  }
+  &-circle {
+    @include circle(2px);
+    right: 20px;
+    &::before {
+      content: "";
+      @include circle(0.676px);
+      top: 18px;
+    }
+  }
+  &-plus {
+    @include plus;
+    right: 20px;
+    bottom: 0;
+    &::before {
+      content: "";
+      @include plus;
+      transform: rotate(90deg);
+      left: -1px;
     }
   }
 }

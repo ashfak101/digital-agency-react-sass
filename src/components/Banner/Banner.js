@@ -10,12 +10,15 @@ export default function Banner() {
                 <div className='banner'>
                     <div className='banner-content'>
                         <h2>Build Your Awesome Platform</h2>
-                        <p>Enver studio is a digital studio that offers several services such as UI/UX Design to developers, we will provide the best service for those of you who use our services.</p>
+                        <p>Enver studio is a digital studio that offers several services such as <br /> UI/UX Design to developers, we will provide the best service <br /> for those of you who use our services.</p>
                         <button>Our Servicess <AiOutlineArrowUp className='banner-icon-ar'/></button>
                     </div>
                     <div className='banner-img'>
                         <i className='banner-arrow'></i>
                         <i className='banner-triangle-1'></i>
+                        <i className='banner-triangle-2'></i>
+                        <i className='banner-circle'></i>
+                        <i className='banner-plus'></i>
                         <img className='img'  src={bannerImg} alt="" />
                     </div>
                 </div>
